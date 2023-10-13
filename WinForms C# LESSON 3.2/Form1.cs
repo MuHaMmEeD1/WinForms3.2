@@ -75,5 +75,34 @@ namespace WinForms_C__LESSON_3._2
 
             }
         }
+
+        private void saveButton2_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Text|*.txt";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                File.WriteAllText(openFileDialog1.FileName, NotRichTextBox1.Text);
+
+            }
+
+        }
+
+        private void loadButton2_Click(object sender, EventArgs e)
+        {
+
+            openFileDialog1.Filter = "Text|*.txt";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                NotRichTextBox1.Text =  File.ReadAllText(openFileDialog1.FileName);
+
+            }
+
+
+
+        }
     }
 }
