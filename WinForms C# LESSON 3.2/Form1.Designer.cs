@@ -1,4 +1,4 @@
-﻿namespace WinForms_C__LESSON_3._2
+namespace WinForms_C__LESSON_3._2
 {
     partial class Form1
     {
@@ -39,6 +39,9 @@
             textSizeLabel3 = new Label();
             button1 = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            openFileDialog1 = new OpenFileDialog();
+            saveButton2 = new Button();
+            loadButton2 = new Button();
             SuspendLayout();
             // 
             // NotRichTextBox1
@@ -110,7 +113,7 @@
             textSizeLabel3.BackColor = SystemColors.ButtonFace;
             textSizeLabel3.Font = new Font("Rockwell Extra Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             textSizeLabel3.ForeColor = SystemColors.ActiveCaptionText;
-            textSizeLabel3.Location = new Point(371, 26);
+            textSizeLabel3.Location = new Point(225, 26);
             textSizeLabel3.Name = "textSizeLabel3";
             textSizeLabel3.Size = new Size(190, 29);
             textSizeLabel3.TabIndex = 7;
@@ -122,7 +125,7 @@
             // 
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("A2 Arial AzCyr", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(566, 26);
+            button1.Location = new Point(420, 26);
             button1.Name = "button1";
             button1.Size = new Size(99, 29);
             button1.TabIndex = 6;
@@ -130,11 +133,41 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click_1;
             // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // saveButton2
+            // 
+            saveButton2.FlatStyle = FlatStyle.Popup;
+            saveButton2.Font = new Font("A2 Arial AzCyr", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            saveButton2.Location = new Point(539, 25);
+            saveButton2.Name = "saveButton2";
+            saveButton2.Size = new Size(61, 29);
+            saveButton2.TabIndex = 8;
+            saveButton2.Text = "SAVE";
+            saveButton2.UseVisualStyleBackColor = true;
+            saveButton2.Click += saveButton2_Click;
+            // 
+            // loadButton2
+            // 
+            loadButton2.FlatStyle = FlatStyle.Popup;
+            loadButton2.Font = new Font("A2 Arial AzCyr", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            loadButton2.Location = new Point(604, 25);
+            loadButton2.Name = "loadButton2";
+            loadButton2.Size = new Size(61, 29);
+            loadButton2.TabIndex = 9;
+            loadButton2.Text = "LOAD";
+            loadButton2.UseVisualStyleBackColor = true;
+            loadButton2.Click += loadButton2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(682, 468);
+            Controls.Add(loadButton2);
+            Controls.Add(saveButton2);
             Controls.Add(textSizeLabel3);
             Controls.Add(button1);
             Controls.Add(FontColorlabel2);
@@ -162,5 +195,8 @@
         private Label textSizeLabel3;
         private Button button1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private OpenFileDialog openFileDialog1;
+        private Button saveButton2;
+        private Button loadButton2;
     }
 }
